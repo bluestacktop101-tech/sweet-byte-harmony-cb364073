@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TechnologyRouteImport } from './routes/technology'
 import { Route as TeamRouteImport } from './routes/team'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as HiringRouteImport } from './routes/hiring'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AssetsRouteImport } from './routes/assets'
 import { Route as AboutRouteImport } from './routes/about'
@@ -30,6 +31,11 @@ const TeamRoute = TeamRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HiringRoute = HiringRouteImport.update({
+  id: '/hiring',
+  path: '/hiring',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/assets': typeof AssetsRoute
   '/contact': typeof ContactRoute
+  '/hiring': typeof HiringRoute
   '/services': typeof ServicesRoute
   '/team': typeof TeamRoute
   '/technology': typeof TechnologyRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/assets': typeof AssetsRoute
   '/contact': typeof ContactRoute
+  '/hiring': typeof HiringRoute
   '/services': typeof ServicesRoute
   '/team': typeof TeamRoute
   '/technology': typeof TechnologyRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/assets': typeof AssetsRoute
   '/contact': typeof ContactRoute
+  '/hiring': typeof HiringRoute
   '/services': typeof ServicesRoute
   '/team': typeof TeamRoute
   '/technology': typeof TechnologyRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/assets'
     | '/contact'
+    | '/hiring'
     | '/services'
     | '/team'
     | '/technology'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/assets'
     | '/contact'
+    | '/hiring'
     | '/services'
     | '/team'
     | '/technology'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/assets'
     | '/contact'
+    | '/hiring'
     | '/services'
     | '/team'
     | '/technology'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AssetsRoute: typeof AssetsRoute
   ContactRoute: typeof ContactRoute
+  HiringRoute: typeof HiringRoute
   ServicesRoute: typeof ServicesRoute
   TeamRoute: typeof TeamRoute
   TechnologyRoute: typeof TechnologyRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hiring': {
+      id: '/hiring'
+      path: '/hiring'
+      fullPath: '/hiring'
+      preLoaderRoute: typeof HiringRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AssetsRoute: AssetsRoute,
   ContactRoute: ContactRoute,
+  HiringRoute: HiringRoute,
   ServicesRoute: ServicesRoute,
   TeamRoute: TeamRoute,
   TechnologyRoute: TechnologyRoute,
