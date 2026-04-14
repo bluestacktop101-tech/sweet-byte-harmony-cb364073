@@ -20,7 +20,7 @@ export default function Footer() {
               A complete, integrated ecosystem supporting the entire real-world asset lifecycle — from tokenization to trading, with full regulatory compliance.
             </p>
             <div className="flex gap-3 mt-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/rwahub" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={18} />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary text-muted-foreground hover:text-primary transition-colors">
@@ -45,6 +45,7 @@ export default function Footer() {
             <h4 className="font-display font-semibold text-foreground mb-4">Company</h4>
             <div className="space-y-2">
               <Link to="/team" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Team</Link>
+              <Link to="/hiring" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Hiring</Link>
               <Link to="/contact" className="block text-sm text-muted-foreground hover:text-primary transition-colors">Contact</Link>
             </div>
           </div>

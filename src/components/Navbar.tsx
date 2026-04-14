@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Assets", to: "/assets" as const },
   { label: "Technology", to: "/technology" as const },
   { label: "Team", to: "/team" as const },
+  { label: "Hiring", to: "/hiring" as const },
   { label: "Contact", to: "/contact" as const },
 ];
 
@@ -29,6 +30,14 @@ export default function Navbar() {
               RWA <span className="text-gradient-primary">Hub</span>
             </span>
           </Link>
+
+          {/* White Paper tag */}
+          <a
+            href="#"
+            className="hidden lg:inline-flex items-center gap-1.5 ml-3 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20 hover:bg-primary/20 transition-colors"
+          >
+            📄 White Paper
+          </a>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
