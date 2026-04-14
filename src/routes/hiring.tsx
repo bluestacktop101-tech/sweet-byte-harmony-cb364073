@@ -763,8 +763,9 @@ function HiringPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="We're Hiring"
-            title="Join the Team Building the Future of RWA"
+            tag="We're Hiring"
+            title="Join the Team Building the"
+            highlight="Future of RWA"
             description="RWAHub is building a decentralized marketplace for real-world assets. We're looking for talented people to join us early and shape the next generation of asset ownership."
           />
 
