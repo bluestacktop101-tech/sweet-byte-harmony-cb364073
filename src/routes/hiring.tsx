@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageLayout from "../components/PageLayout";
@@ -733,14 +733,13 @@ function JobCard({ job }: { job: JobPosition }) {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={job.notionUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/apply"
+                  search={{ position: job.title }}
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
                 >
                   Apply Now <ExternalLink size={14} />
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
