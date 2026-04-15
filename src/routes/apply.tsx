@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Send, ArrowLeft, Upload, Github, Mail, FileText, User } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import SectionHeader from "@/components/SectionHeader";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/apply")({
   component: ApplyPage,
@@ -23,6 +24,8 @@ export const Route = createFileRoute("/apply")({
 function ApplyPage() {
   const { position } = Route.useSearch();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -35,8 +38,30 @@ function ApplyPage() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+
+    const { error: insertError } = await supabase
+      .from("job_applications")
+      .insert({
+        position: position || "General",
+        full_name: formData.fullName,
+        email: formData.email,
+        github: formData.github || null,
+        portfolio: formData.portfolio,
+        description: formData.description,
+      });
+
+    setSubmitting(false);
+
+    if (insertError) {
+      setError("Failed to submit application. Please try again.");
+      console.error(insertError);
+      return;
+    }
+
     setSubmitted(true);
   };
 
