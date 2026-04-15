@@ -37,6 +37,10 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { property: "og:title", content: "RWA Hub — Real-World Asset Tokenization" },
+      { name: "twitter:title", content: "RWA Hub — Real-World Asset Tokenization" },
+      { property: "og:description", content: "A complete ecosystem for real-world asset tokenization." },
+      { name: "twitter:description", content: "A complete ecosystem for real-world asset tokenization." },
     ],
     links: [
       {
