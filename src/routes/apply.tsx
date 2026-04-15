@@ -224,11 +224,16 @@ function ApplyPage() {
               />
             </div>
 
+            {error && (
+              <p className="text-sm text-destructive text-center">{error}</p>
+            )}
+
             <button
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
+              disabled={submitting}
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity disabled:opacity-50"
             >
-              <Send size={16} /> Submit Application
+              {submitting ? "Submitting..." : <><Send size={16} /> Submit Application</>}
             </button>
           </motion.form>
         </div>
