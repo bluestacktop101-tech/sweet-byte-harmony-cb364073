@@ -6,19 +6,19 @@ import heroBg from "@/assets/hero-bg.jpg";
 import PageLayout from "@/components/PageLayout";
 
 const stats = [
-  { icon: Shield, label: "Secure & Compliant" },
-  { icon: Globe, label: "Global Access" },
-  { icon: TrendingUp, label: "Enhanced Liquidity" },
+  { icon: Shield, label: "Regulated & Secure" },
+  { icon: Globe, label: "Available Worldwide" },
+  { icon: TrendingUp, label: "Start from $100" },
 ];
 
 export const Route = createFileRoute("/")({
   component: IndexPage,
   head: () => ({
     meta: [
-      { title: "RWA Hub — Real-World Asset Tokenization Protocol" },
-      { name: "description", content: "RWA Hub is a complete ecosystem for real-world asset tokenization — from creation to trading, with full regulatory compliance." },
-      { property: "og:title", content: "RWA Hub — Real-World Asset Tokenization Protocol" },
-      { property: "og:description", content: "Making every asset available to anyone, anywhere." },
+      { title: "RWA Hub — Invest in Real-World Assets from $100" },
+      { name: "description", content: "RWA Hub lets you invest in real estate, commodities, and other tangible assets online — starting at $100, with full transparency and regulatory protection." },
+      { property: "og:title", content: "RWA Hub — Invest in Real-World Assets from $100" },
+      { property: "og:description", content: "Buy a fraction of real assets online. Simple, secure, and accessible from anywhere." },
     ],
   }),
 });
