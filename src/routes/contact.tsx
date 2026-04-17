@@ -71,7 +71,7 @@ function ContactPage() {
                   rows={4}
                   required
                   className="w-full px-4 py-2.5 rounded-lg bg-secondary border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="How can we help?"
                 />
               </div>
               <button
