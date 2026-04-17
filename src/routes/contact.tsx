@@ -10,9 +10,9 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — RWA Hub" },
-      { name: "description", content: "Get in touch with the RWA Hub team to tokenize your assets." },
+      { name: "description", content: "Get in touch with the RWA Hub team — for investor questions, asset listings, or partnerships." },
       { property: "og:title", content: "Contact — RWA Hub" },
-      { property: "og:description", content: "Ready to tokenize your assets? Let's connect." },
+      { property: "og:description", content: "Talk to our team about investing or listing your asset." },
     ],
   }),
 });
@@ -32,9 +32,9 @@ function ContactPage() {
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             tag="Contact"
-            title="Let's"
-            highlight="Connect"
-            description="Ready to tokenize your assets? Get in touch with our team."
+            title="Get in"
+            highlight="Touch"
+            description="Have a question about investing, want to list an asset, or explore a partnership? Send us a message — we usually reply within one business day."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
