@@ -7,32 +7,32 @@ import SectionHeader from "@/components/SectionHeader";
 const assetTypes = [
   {
     icon: Building2,
-    type: "Real Property",
+    type: "Real Estate",
     code: "RH-10YYYY",
     items: [
       { name: "Miami Waterfront Commercial Complex", value: "$24,500,000", tokens: "245,000,000", price: "$0.10", status: "Live" },
       { name: "Dubai Marina Residential Tower", value: "$18,000,000", tokens: "180,000,000", price: "$0.10", status: "Coming Soon" },
     ],
-    description: "Token amount = Area × 10,000. Requires property certificate, land certificate documentation.",
+    description: "Residential and commercial properties. Backed by title deeds and independent valuations.",
   },
   {
     icon: BarChart2,
-    type: "Securities",
+    type: "Securities & Funds",
     code: "RH-20YYYY",
     items: [
       { name: "BTC ETF Fund", value: "$100,000,000", tokens: "100,000,000", price: "$1.00", status: "Live" },
       { name: "Nasdaq Stock Portfolio", value: "$1,000,000", tokens: "10,000,000", price: "$0.10", status: "Live" },
     ],
-    description: "Stocks, ETFs, and financial assets with customizable token amounts.",
+    description: "ETFs, equity portfolios, and other regulated financial products.",
   },
   {
     icon: Landmark,
-    type: "Quasi Property",
+    type: "Alternative Assets",
     code: "RH-30YYYY",
     items: [
       { name: "Siberian Green Energy BTC Mining Center", value: "$100,000,000", tokens: "100,000,000", price: "$1.00", status: "Live" },
     ],
-    description: "Commercial and similar real estate. Requires auction and exhibition documentation.",
+    description: "Income-producing real assets such as energy and infrastructure projects, supported by formal documentation.",
   },
 ];
 
@@ -41,9 +41,9 @@ export const Route = createFileRoute("/assets")({
   head: () => ({
     meta: [
       { title: "Assets — RWA Hub" },
-      { name: "description", content: "Browse tokenized asset classes — real property, securities, and quasi property — all on-chain." },
-      { property: "og:title", content: "Tokenized Assets — RWA Hub" },
-      { property: "og:description", content: "Three main asset types supporting diverse investment needs." },
+      { name: "description", content: "Browse real-world investment opportunities — real estate, securities, and alternative assets — starting from $100." },
+      { property: "og:title", content: "Available Assets — RWA Hub" },
+      { property: "og:description", content: "Three categories of real-world assets you can invest in today." },
     ],
   }),
 });
@@ -55,9 +55,9 @@ function AssetsPage() {
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             tag="Marketplace"
-            title="Tokenized"
+            title="Available"
             highlight="Asset Classes"
-            description="Three main asset types supporting diverse investment needs — all on-chain, fully transparent, and globally accessible."
+            description="Three categories of real-world investments — clearly priced, fully documented, and accessible from $100."
           />
 
           <div className="space-y-8">
