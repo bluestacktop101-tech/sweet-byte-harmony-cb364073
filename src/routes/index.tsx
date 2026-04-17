@@ -45,7 +45,7 @@ function IndexPage() {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-6">
-              Real-World Asset Tokenization Protocol
+              Real-World Asset Investing
             </span>
           </motion.div>
 
