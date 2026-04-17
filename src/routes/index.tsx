@@ -53,39 +53,39 @@ function IndexPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight"
           >
-            Making Every Asset{" "}
-            <span className="text-gradient-primary">Available to Anyone,</span>{" "}
-            <span className="text-gradient-accent">Anywhere</span>
+            Invest in{" "}
+            <span className="text-gradient-primary">real-world assets</span>{" "}
+            from <span className="text-gradient-accent">$100</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-6 text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
+            className="mt-8 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
-            RWA Hub is a complete, integrated ecosystem supporting the entire real-world asset lifecycle — from tokenization to trading, with full regulatory compliance.
+            Buy a fraction of real estate, gold, and other tangible assets online — starting with just $100.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
+            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
+              to="/services"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-base hover:opacity-90 transition-opacity"
             >
-              Start Tokenizing <ArrowRight size={16} />
+              Explore Assets <ArrowRight size={16} />
             </Link>
             <Link
-              to="/services"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-medium text-sm hover:bg-secondary transition-colors"
+              to="/technology"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg border border-border text-foreground font-medium text-base hover:bg-secondary transition-colors"
             >
-              Explore Ecosystem
+              How It Works
             </Link>
           </motion.div>
 
