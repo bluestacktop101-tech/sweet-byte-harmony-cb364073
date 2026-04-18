@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Globe, TrendingUp, BadgeCheck, Layers, Wallet, LineChart } from "lucide-react";
+import { ArrowRight, Shield, Globe, TrendingUp, BadgeCheck, Layers, Wallet, LineChart, Scale, FileSearch, Lock, Eye } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import PageLayout from "@/components/PageLayout";
@@ -16,6 +16,13 @@ const steps = [
   { icon: Layers, title: "Tokenized into shares", description: "Ownership is split into affordable digital shares." },
   { icon: Wallet, title: "Users invest", description: "Buy a share online in minutes, starting from $100." },
   { icon: LineChart, title: "Earn returns and trade", description: "Receive income and trade your shares anytime." },
+];
+
+const trustItems = [
+  { icon: Scale, title: "Legal structure", description: "Each asset is held within a regulated legal entity." },
+  { icon: FileSearch, title: "Asset verification", description: "Independent audits and documentation for every listing." },
+  { icon: Lock, title: "Secure custody", description: "Funds and assets safeguarded by licensed custodians." },
+  { icon: Eye, title: "Transparency", description: "Full visibility into ownership, fees, and performance." },
 ];
 
 export const Route = createFileRoute("/")({
@@ -142,6 +149,42 @@ function IndexPage() {
                     <Icon size={18} className="text-primary" />
                   </div>
                   <span className="text-xs font-medium text-muted-foreground">Step {i + 1}</span>
+                </div>
+                <h3 className="font-display text-base font-semibold text-foreground">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust */}
+      <section className="section-padding border-t border-border">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="inline-block px-3 py-1 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-4">
+              Trust & Safety
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+              Built on a foundation of trust
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Investor protection is at the core of everything we do.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {trustItems.map(({ icon: Icon, title, description }, i) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="rounded-xl bg-card border border-border p-6 hover:border-primary/40 transition-colors"
+              >
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center mb-4">
+                  <Icon size={18} className="text-primary" />
                 </div>
                 <h3 className="font-display text-base font-semibold text-foreground">{title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{description}</p>
