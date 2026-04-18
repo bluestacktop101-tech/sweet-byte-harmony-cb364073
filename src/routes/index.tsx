@@ -5,9 +5,16 @@ import { Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import PageLayout from "@/components/PageLayout";
 
-const stats = [
-  { icon: Shield, label: "Regulated & Secure" },
-  { icon: Globe, label: "Available Worldwide" },
+const platformStats = [
+  { value: "$240M+", label: "Assets under management" },
+  { value: "12,000+", label: "Active investors" },
+  { value: "9.4%", label: "Avg. annual yield" },
+  { value: "60+", label: "Countries supported" },
+];
+
+const trustBadges = [
+  { icon: Shield, label: "Regulated entity" },
+  { icon: Globe, label: "Available worldwide" },
   { icon: TrendingUp, label: "Start from $100" },
 ];
 
@@ -58,8 +65,9 @@ function IndexPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-6">
-              Real-World Asset Investing
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-primary text-xs font-semibold tracking-wider uppercase mb-6 border border-primary/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              Live Investment Platform
             </span>
           </motion.div>
 
@@ -67,7 +75,7 @@ function IndexPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] tracking-tight"
           >
             Invest in{" "}
             <span className="text-gradient-primary">real-world assets</span>{" "}
@@ -80,7 +88,7 @@ function IndexPage() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mt-8 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
-            Buy a fraction of real estate, gold, and other tangible assets online — starting with just $100.
+            Buy a fraction of real estate, gold, and other tangible assets online — fully documented, regulated, and accessible from anywhere.
           </motion.p>
 
           <motion.div
@@ -90,10 +98,10 @@ function IndexPage() {
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
-              to="/services"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-base hover:opacity-90 transition-opacity"
+              to="/assets"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-primary text-primary-foreground font-semibold text-base hover:opacity-90 transition-opacity shadow-lg shadow-primary/20"
             >
-              Explore Assets <ArrowRight size={16} />
+              Explore Marketplace <ArrowRight size={16} />
             </Link>
             <Link
               to="/technology"
@@ -107,12 +115,29 @@ function IndexPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 flex flex-wrap justify-center gap-8"
+            className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3"
           >
-            {stats.map(({ icon: Icon, label }) => (
+            {trustBadges.map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 text-muted-foreground">
-                <Icon size={18} className="text-primary" />
+                <Icon size={16} className="text-primary" />
                 <span className="text-sm">{label}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Platform stats bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.75 }}
+            className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-border bg-border max-w-4xl mx-auto"
+          >
+            {platformStats.map((s) => (
+              <div key={s.label} className="bg-card px-4 py-5 text-center">
+                <p className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight">
+                  {s.value}
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground leading-tight">{s.label}</p>
               </div>
             ))}
           </motion.div>
