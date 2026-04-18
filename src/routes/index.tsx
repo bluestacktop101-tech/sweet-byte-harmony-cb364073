@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Globe, TrendingUp, BadgeCheck, Layers, Wallet, LineChart } from "lucide-react";
+import { ArrowRight, Shield, Globe, TrendingUp, BadgeCheck, Layers, Wallet, LineChart, Scale, FileSearch, Lock, Eye } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import PageLayout from "@/components/PageLayout";
