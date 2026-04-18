@@ -18,6 +18,13 @@ const steps = [
   { icon: LineChart, title: "Earn returns and trade", description: "Receive income and trade your shares anytime." },
 ];
 
+const trustItems = [
+  { icon: Scale, title: "Legal structure", description: "Each asset is held within a regulated legal entity." },
+  { icon: FileSearch, title: "Asset verification", description: "Independent audits and documentation for every listing." },
+  { icon: Lock, title: "Secure custody", description: "Funds and assets safeguarded by licensed custodians." },
+  { icon: Eye, title: "Transparency", description: "Full visibility into ownership, fees, and performance." },
+];
+
 export const Route = createFileRoute("/")({
   component: IndexPage,
   head: () => ({
