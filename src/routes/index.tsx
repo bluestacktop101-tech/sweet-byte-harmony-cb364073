@@ -5,9 +5,16 @@ import { Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import PageLayout from "@/components/PageLayout";
 
-const stats = [
-  { icon: Shield, label: "Regulated & Secure" },
-  { icon: Globe, label: "Available Worldwide" },
+const platformStats = [
+  { value: "$240M+", label: "Assets under management" },
+  { value: "12,000+", label: "Active investors" },
+  { value: "9.4%", label: "Avg. annual yield" },
+  { value: "60+", label: "Countries supported" },
+];
+
+const trustBadges = [
+  { icon: Shield, label: "Regulated entity" },
+  { icon: Globe, label: "Available worldwide" },
   { icon: TrendingUp, label: "Start from $100" },
 ];
 
