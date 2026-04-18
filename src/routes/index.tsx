@@ -111,6 +111,45 @@ function IndexPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* How It Works */}
+      <section className="section-padding border-t border-border">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="inline-block px-3 py-1 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-4">
+              How It Works
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+              From real asset to your portfolio
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              A simple, transparent process — from verification to earning returns.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {steps.map(({ icon: Icon, title, description }, i) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="relative rounded-xl bg-card border border-border p-6 hover:border-primary/40 transition-colors"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
+                    <Icon size={18} className="text-primary" />
+                  </div>
+                  <span className="text-xs font-medium text-muted-foreground">Step {i + 1}</span>
+                </div>
+                <h3 className="font-display text-base font-semibold text-foreground">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </PageLayout>
   );
 }
