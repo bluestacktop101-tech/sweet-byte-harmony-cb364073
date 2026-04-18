@@ -98,10 +98,10 @@ function IndexPage() {
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
-              to="/services"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-base hover:opacity-90 transition-opacity"
+              to="/assets"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-primary text-primary-foreground font-semibold text-base hover:opacity-90 transition-opacity shadow-lg shadow-primary/20"
             >
-              Explore Assets <ArrowRight size={16} />
+              Explore Marketplace <ArrowRight size={16} />
             </Link>
             <Link
               to="/technology"
@@ -115,12 +115,29 @@ function IndexPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 flex flex-wrap justify-center gap-8"
+            className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3"
           >
-            {stats.map(({ icon: Icon, label }) => (
+            {trustBadges.map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 text-muted-foreground">
-                <Icon size={18} className="text-primary" />
+                <Icon size={16} className="text-primary" />
                 <span className="text-sm">{label}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Platform stats bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.75 }}
+            className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-border bg-border max-w-4xl mx-auto"
+          >
+            {platformStats.map((s) => (
+              <div key={s.label} className="bg-card px-4 py-5 text-center">
+                <p className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight">
+                  {s.value}
+                </p>
+                <p className="mt-1 text-xs text-muted-foreground leading-tight">{s.label}</p>
               </div>
             ))}
           </motion.div>
