@@ -122,19 +122,19 @@ function IndexPage() {
       {/* How It Works */}
       <section className="section-padding border-t border-border">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-block px-3 py-1 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-4">
+          <div className="text-center max-w-2xl mx-auto mb-14 md:mb-20">
+            <span className="inline-block px-3 py-1 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-5">
               How It Works
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+            <h2 className="section-heading text-foreground">
               From real asset to your portfolio
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
               A simple, transparent process — from verification to earning returns.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {steps.map(({ icon: Icon, title, description }, i) => (
               <motion.div
                 key={title}
@@ -161,19 +161,19 @@ function IndexPage() {
       {/* Trust */}
       <section className="section-padding border-t border-border">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-block px-3 py-1 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-4">
+          <div className="text-center max-w-2xl mx-auto mb-14 md:mb-20">
+            <span className="inline-block px-3 py-1 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-5">
               Trust & Safety
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+            <h2 className="section-heading text-foreground">
               Built on a foundation of trust
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
               Investor protection is at the core of everything we do.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {trustItems.map(({ icon: Icon, title, description }, i) => (
               <motion.div
                 key={title}
