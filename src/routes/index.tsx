@@ -65,8 +65,9 @@ function IndexPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-6">
-              Real-World Asset Investing
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-primary text-xs font-semibold tracking-wider uppercase mb-6 border border-primary/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              Live Investment Platform
             </span>
           </motion.div>
 
@@ -74,7 +75,7 @@ function IndexPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.05] tracking-tight"
           >
             Invest in{" "}
             <span className="text-gradient-primary">real-world assets</span>{" "}
@@ -87,7 +88,7 @@ function IndexPage() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mt-8 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
-            Buy a fraction of real estate, gold, and other tangible assets online — starting with just $100.
+            Buy a fraction of real estate, gold, and other tangible assets online — fully documented, regulated, and accessible from anywhere.
           </motion.p>
 
           <motion.div
