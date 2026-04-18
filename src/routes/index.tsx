@@ -134,7 +134,7 @@ function IndexPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {steps.map(({ icon: Icon, title, description }, i) => (
               <motion.div
                 key={title}
