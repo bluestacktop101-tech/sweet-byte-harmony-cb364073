@@ -193,6 +193,42 @@ function IndexPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      <section className="section-padding border-t border-border">
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative overflow-hidden rounded-2xl bg-card border border-border p-10 md:p-16 text-center"
+          >
+            <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 rounded-full bg-accent/10 blur-3xl" />
+
+            <div className="relative z-10 flex flex-col items-center">
+              <span className="inline-block px-3 py-1 rounded-full bg-secondary text-primary text-xs font-medium tracking-wider uppercase mb-5">
+                Get Started
+              </span>
+              <h2 className="section-heading text-foreground max-w-2xl">
+                Start investing in{" "}
+                <span className="text-gradient-primary">real-world assets</span>{" "}
+                today
+              </h2>
+              <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
+                Browse verified opportunities and build your portfolio from $100.
+              </p>
+              <Link
+                to="/assets"
+                className="mt-8 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-gradient-primary text-primary-foreground font-medium text-base hover:opacity-90 transition-opacity"
+              >
+                Explore Marketplace <ArrowRight size={16} />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </PageLayout>
   );
 }
