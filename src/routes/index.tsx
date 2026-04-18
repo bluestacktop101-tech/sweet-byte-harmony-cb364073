@@ -11,6 +11,13 @@ const stats = [
   { icon: TrendingUp, label: "Start from $100" },
 ];
 
+const steps = [
+  { icon: BadgeCheck, title: "Assets are verified", description: "Every asset is reviewed and documented before it's listed." },
+  { icon: Layers, title: "Tokenized into shares", description: "Ownership is split into affordable digital shares." },
+  { icon: Wallet, title: "Users invest", description: "Buy a share online in minutes, starting from $100." },
+  { icon: LineChart, title: "Earn returns and trade", description: "Receive income and trade your shares anytime." },
+];
+
 export const Route = createFileRoute("/")({
   component: IndexPage,
   head: () => ({
