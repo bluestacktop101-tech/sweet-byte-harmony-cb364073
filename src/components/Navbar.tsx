@@ -98,6 +98,13 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              <Link
+                to="/assets"
+                onClick={() => setIsOpen(false)}
+                className="mt-3 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-gradient-primary text-primary-foreground text-sm font-semibold"
+              >
+                Invest Now
+              </Link>
             </div>
           </motion.div>
         )}
